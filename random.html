@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>随机壁纸</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <img id="wallpaper" src="" alt="随机壁纸">
+  <script>
+    const images = [
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/fca15a4908af4eb4b57445e5b7af8ff6.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/f9da229d404e40f7999a8420148e1b0d.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/af330104d56b4a57ade7b9edc725f815.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/94628268331f4a9b92c0c36f5f4b196b.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/47482bcb3a294e868546d6c73f1e7ca8.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/45d3653a43084023be5616829a077e6a.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/1c981237cb6245a1b21d30696bbb26bd.png",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/08b3b5bc32e74acfbfe530412b967092.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/04e25badcf314d87a81e90c8ea171cae.jpg",
+      "https://raw.githubusercontent.com/charlestan-dev/tvbox-wallpaper/refs/heads/main/020a1051d89f40bd92ad4ce455860ff5.jpg"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    document.getElementById("wallpaper").src = images[randomIndex];
+  </script>
+</body>
+</html>
